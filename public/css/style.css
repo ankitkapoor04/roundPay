@@ -12,6 +12,68 @@ body {
   color: #333;
   background: #f4f4f4;
 }
+/* Social Media Icons (Sticky on the Right) */
+.social-icons {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.social-icons a {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.social-icons .social-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #25D366; /* WhatsApp Green */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.social-icons .whatsapp {
+  background-color: #25D366;
+}
+
+.social-icons .instagram {
+  background-color: #C13584; /* Instagram Purple */
+}
+
+.social-icons img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.social-icons .social-icon:hover {
+  width: 200px;  /* Increase width on hover */
+  padding-left: 120px; /* Create space for text */
+}
+
+.social-icons .social-text {
+  position: absolute;
+  left: 60px; /* Place text beside the icon */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  display: none;  /* Hide text by default */
+}
+
+/* Show text on hover */
+.social-icons .whatsapp:hover .social-text {
+  display: block;
+}
+
 /* Contact Info Section */
 .contact-info {
   background-color: #0e0d0d;
