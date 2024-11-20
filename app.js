@@ -1,21 +1,21 @@
 const express = require("express");
-const app = express();
 const path = require("path");
+const app = express();
 
-// Middleware to parse JSON (optional, but often needed)
-app.use(express.json());
+// Middleware to serve static files
+app.use(express.static(path.join(__dirname, "public")));
 
-// Set up the view engine and views directory
+
+// Set up the view engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-// Index Route
+// Route to render the index.ejs
 app.get("/", (req, res) => {
-    res.render("index"); // No need to specify .ejs
+    res.render("index");
 });
 
-// Start the server
 const PORT = 8080;
 app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
+    console.log(`Server is listening on port ${PORT}`);
 });

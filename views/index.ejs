@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navigation Bar</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Recharge Page</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="logo">MyLogo</div>
+    <div class="logo">RechargeNow</div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#login">Login</a></li>
     </ul>
     <div class="hamburger">
       <span></span>
@@ -21,6 +23,52 @@
       <span></span>
     </div>
   </nav>
+
+  <!-- Fullscreen Image/Video Banner -->
+  <section class="fullscreen-banner">
+    <!-- Uncomment one of the following lines based on your preference -->
+    <!-- For Fullscreen Image -->
+    <img src="images/banner.jpg" alt="Recharge Banner" class="banner-image">
+    
+    <!-- For Fullscreen Video -->
+    <!-- <video autoplay muted loop class="banner-video">
+      <source src="videos/banner.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
+    
+    <div class="banner-text">
+      <h1>Recharge Instantly, Anywhere</h1>
+      <p>Fast and secure recharge for all networks.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section id="recharge" class="recharge-section">
+    <div class="container">
+      <h1>Recharge Your Mobile Instantly</h1>
+      <form class="recharge-form">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter phone number" required>
+
+        <label for="operator">Select Operator</label>
+        <select id="operator" name="operator">
+          <option value="airtel">Airtel</option>
+          <option value="jio">Jio</option>
+          <option value="vodafone">Vodafone</option>
+          <option value="bsnl">BSNL</option>
+        </select>
+
+        <label for="amount">Recharge Amount</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+        <button type="submit" class="btn-recharge">Recharge Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 RechargeNow. All rights reserved.</p>
+  </footer>
 
   <script>
     // Toggle menu for smaller screens
