@@ -12,7 +12,22 @@ body {
   color: #333;
   background: #f4f4f4;
 }
-
+/* Contact Info Section */
+.contact-info {
+  background-color: #0e0d0d;
+  padding: 8px 6px;
+  font-size: 14px;
+  color : white;
+  text-align: left;
+}
+.btn3{
+  background: red;
+  font-size: 20px;
+  border-radius: 16px;
+}
+.contact-info p {
+  margin: 0;
+}
 /* Navbar */
 .navbar {
   display: flex;
