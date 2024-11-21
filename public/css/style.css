@@ -74,6 +74,68 @@ body {
   display: block;
 }
 
+/* Horizontal Components Section */
+.horizontal-components {
+  display: flex;
+  width: 85%;
+  transform: translateY(-40px);
+  margin-left: 85px;
+  justify-content: space-between; /* Space between components */
+  align-items: center;
+  padding: 20px;
+  gap: 10px; /* Adds spacing between items */
+}
+
+.component {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  width: 23%; /* Ensures four items fit in a row */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.component img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.component h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.component p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Hover Effect */
+.component:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .horizontal-components {
+    flex-wrap: wrap; /* Stack items on smaller screens */
+  }
+
+  .component {
+    width: 48%; /* Two components per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .component {
+    width: 100%; /* Single component per row */
+  }
+}
+
 /* Contact Info Section */
 .contact-info {
   background-color: #0e0d0d;

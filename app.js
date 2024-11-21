@@ -15,6 +15,27 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+// Define Routes
+app.get("/index", (req, res) => {
+    res.render("index");
+  });
+
+  app.get("/about", (req, res) => {
+    res.render("about");
+  });
+
+  app.get("/services", (req, res) => {
+    res.render("services");
+  });
+
+  app.get("/contact", (req, res) => {
+    res.render("contact");
+  });
+
+  app.get("/login", (req, res) => {
+    res.render("login");
+  });
+
 const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
